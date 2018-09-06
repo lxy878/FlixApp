@@ -1,14 +1,14 @@
 //
-//  FlixUITests.swift
-//  FlixUITests
+//  FlixAppUITests.swift
+//  FlixAppUITests
 //
-//  Created by Xiaoyi Liu on 9/5/18.
+//  Created by Xiaoyi Liu on 9/6/18.
 //  Copyright © 2018 Xiaoyi Liu. All rights reserved.
 //
 
 import XCTest
 
-class FlixUITests: XCTestCase {
+class FlixAppUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

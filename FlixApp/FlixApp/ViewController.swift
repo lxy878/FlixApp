@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Flix
+//  FlixApp
 //
-//  Created by Xiaoyi Liu on 9/5/18.
+//  Created by Xiaoyi Liu on 9/6/18.
 //  Copyright © 2018 Xiaoyi Liu. All rights reserved.
 //
 
