@@ -24,8 +24,15 @@ class FlixAppMain: UIViewController {
             if let error = error{
                 print(error.localizedDescription)
             }else if let data = data {
+                // create a dictionary for json data
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
-                print(dataDictionary)
+                //print(dataDictionary)
+                // get data in dictionary of the "results" key
+                let movies = dataDictionary["results"] as! [[String:Any]]
+                for movie in movies{
+                    let title = movie["title"] as! String
+                    print(title)
+                }
             }
         }
         // call task
