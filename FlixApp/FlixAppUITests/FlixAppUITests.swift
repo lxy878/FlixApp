@@ -2,7 +2,7 @@
 //  FlixAppUITests.swift
 //  FlixAppUITests
 //
-//  Created by Xiaoyi Liu on 9/6/18.
+//  Created by Xiaoyi Liu on 9/9/18.
 //  Copyright © 2018 Xiaoyi Liu. All rights reserved.
 //
 
