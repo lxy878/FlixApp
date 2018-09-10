@@ -13,13 +13,21 @@ class FlixAppMain: UIViewController, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
     var movieList : [[String : Any]] = []
+    var refreshControl : UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(FlixAppMain.refresh(_:)), for: .valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
-        
-        
+        fatchMovies()
+    }
+    @objc func refresh(_ refreshControl : UIRefreshControl){
+        fatchMovies()
+    }
+    func fatchMovies(){
         // create url and url request
         // "!"-unswrap
         let url = URL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
@@ -38,14 +46,13 @@ class FlixAppMain: UIViewController, UITableViewDataSource{
                 // get data in dictionary of the "results" key
                 let movies = dataDictionary["results"] as! [[String:Any]]
                 self.movieList = movies
-                
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
         }
         // call task
         task.resume()
     }
-    
     // table view data source protocol
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieList.count

@@ -32,46 +32,46 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fyo-OK-8cp">
-                                                    <rect key="frame" x="15" y="11" width="83" height="115"/>
+                                                    <rect key="frame" x="6" y="4" width="83" height="128"/>
                                                     <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="115" id="iNC-g0-kLx"/>
-                                                        <constraint firstAttribute="width" constant="83" id="rZj-LU-j7p"/>
+                                                        <constraint firstAttribute="width" constant="83" id="QDU-pw-uel"/>
+                                                        <constraint firstAttribute="height" constant="128" id="SAQ-X4-rva"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crazy Rich Asians" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9f-eM-0wb">
-                                                    <rect key="frame" x="106" y="11" width="254" height="36"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2H-IB-A7S">
+                                                    <rect key="frame" x="97" y="34" width="263" height="98"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="254" id="T7s-fV-7o9"/>
-                                                        <constraint firstAttribute="height" constant="36" id="kQk-U2-sP5"/>
+                                                        <constraint firstAttribute="width" constant="263" id="K8o-p1-RFD"/>
+                                                        <constraint firstAttribute="height" constant="98" id="w4x-3L-1uB"/>
+                                                    </constraints>
+                                                    <string key="text">A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crazy Rich Asians" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9f-eM-0wb">
+                                                    <rect key="frame" x="97" y="11" width="251" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="U9w-P8-B6f"/>
+                                                        <constraint firstAttribute="width" constant="251" id="UyA-ZN-jcw"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2H-IB-A7S">
-                                                    <rect key="frame" x="106" y="55" width="254" height="71"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="254" id="pfD-ZY-tSG"/>
-                                                        <constraint firstAttribute="height" constant="71" id="rXH-EW-yzK"/>
-                                                    </constraints>
-                                                    <string key="text">A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.</string>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="X9f-eM-0wb" firstAttribute="trailing" secondItem="643-Qd-0ha" secondAttribute="trailingMargin" id="0XF-jX-6l7"/>
-                                                <constraint firstItem="Fyo-OK-8cp" firstAttribute="leading" secondItem="643-Qd-0ha" secondAttribute="leadingMargin" id="B8n-Wh-gF0"/>
-                                                <constraint firstItem="v2H-IB-A7S" firstAttribute="bottom" secondItem="643-Qd-0ha" secondAttribute="bottomMargin" id="Chs-n1-Wes"/>
-                                                <constraint firstItem="Fyo-OK-8cp" firstAttribute="top" secondItem="643-Qd-0ha" secondAttribute="topMargin" id="Gu2-bo-Tmo"/>
-                                                <constraint firstItem="v2H-IB-A7S" firstAttribute="trailing" secondItem="643-Qd-0ha" secondAttribute="trailingMargin" id="Sk3-lV-Bhf"/>
-                                                <constraint firstItem="v2H-IB-A7S" firstAttribute="leading" secondItem="Fyo-OK-8cp" secondAttribute="trailing" constant="8" id="UM0-Cj-v5k"/>
-                                                <constraint firstItem="v2H-IB-A7S" firstAttribute="top" secondItem="X9f-eM-0wb" secondAttribute="bottom" constant="8" id="V82-9O-qT3"/>
-                                                <constraint firstItem="Fyo-OK-8cp" firstAttribute="bottom" secondItem="643-Qd-0ha" secondAttribute="bottomMargin" id="gA9-vj-v4Y"/>
-                                                <constraint firstItem="X9f-eM-0wb" firstAttribute="leading" secondItem="Fyo-OK-8cp" secondAttribute="trailing" constant="8" id="nkK-1t-MK9"/>
-                                                <constraint firstItem="X9f-eM-0wb" firstAttribute="top" secondItem="643-Qd-0ha" secondAttribute="topMargin" id="wKA-s3-ShK"/>
+                                                <constraint firstItem="v2H-IB-A7S" firstAttribute="top" secondItem="X9f-eM-0wb" secondAttribute="bottom" constant="1" id="0pX-o2-6oy"/>
+                                                <constraint firstItem="v2H-IB-A7S" firstAttribute="leading" secondItem="Fyo-OK-8cp" secondAttribute="trailing" constant="8" id="AH3-io-xUR"/>
+                                                <constraint firstItem="Fyo-OK-8cp" firstAttribute="top" secondItem="643-Qd-0ha" secondAttribute="topMargin" constant="-7" id="L1u-qd-u2O"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="v2H-IB-A7S" secondAttribute="bottom" constant="-6" id="T6c-L7-6JH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="X9f-eM-0wb" secondAttribute="trailing" constant="12" id="WBp-dX-WOG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Fyo-OK-8cp" secondAttribute="bottom" constant="-6" id="WFk-Zn-jhk"/>
+                                                <constraint firstItem="X9f-eM-0wb" firstAttribute="top" secondItem="643-Qd-0ha" secondAttribute="topMargin" id="Zia-KU-pxt"/>
+                                                <constraint firstItem="X9f-eM-0wb" firstAttribute="leading" secondItem="Fyo-OK-8cp" secondAttribute="trailing" constant="8" id="pxQ-jb-Ic0"/>
+                                                <constraint firstItem="Fyo-OK-8cp" firstAttribute="leading" secondItem="643-Qd-0ha" secondAttribute="leadingMargin" constant="-9" id="quo-vv-DDD"/>
+                                                <constraint firstItem="v2H-IB-A7S" firstAttribute="trailing" secondItem="643-Qd-0ha" secondAttribute="trailingMargin" id="zCX-GN-XXe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
