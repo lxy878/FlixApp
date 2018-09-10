@@ -12,18 +12,23 @@ import AlamofireImage
 class FlixAppMain: UIViewController, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     var movieList : [[String : Any]] = []
     var refreshControl : UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //activityIndicator.startAnimating()
+        //activityIndicator.stopAnimating()
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(FlixAppMain.refresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
         fatchMovies()
     }
+    
     @objc func refresh(_ refreshControl : UIRefreshControl){
         fatchMovies()
     }
