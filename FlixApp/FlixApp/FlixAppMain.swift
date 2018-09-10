@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class FlixAppMain: UIViewController, UITableViewDataSource{
     
@@ -21,7 +22,7 @@ class FlixAppMain: UIViewController, UITableViewDataSource{
         
         // create url and url request
         // "!"-unswrap
-        let url = URL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=   ")!
+        let url = URL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         // cachePolicy means what action url will do when network is connected.
         // reloadIgnoringLocalCacheData means that always load data from network, even the data is in the local cache (only for testing)
         let request =  URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -53,11 +54,18 @@ class FlixAppMain: UIViewController, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
+        // load titles and overviews of movies
         let movie = movieList[indexPath.row]
         let title = movie["title"] as! String
         let overview = movie["overview"] as! String
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
+        
+        // to load image, it requires base url, size, and filepath
+        let posterPath = movie["poster_path"] as! String
+        let baseURL = "https://image.tmdb.org/t/p/w500"
+        let posterURL = URL(string: baseURL + posterPath)!
+        cell.posterImage.af_setImage(withURL: posterURL)
         return cell
     }
 

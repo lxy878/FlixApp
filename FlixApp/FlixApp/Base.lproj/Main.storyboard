@@ -76,6 +76,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="overviewLabel" destination="v2H-IB-A7S" id="O1a-S0-lNG"/>
+                                            <outlet property="posterImage" destination="Fyo-OK-8cp" id="YLf-UV-HRh"/>
                                             <outlet property="titleLabel" destination="X9f-eM-0wb" id="MFb-AM-JRR"/>
                                         </connections>
                                     </tableViewCell>
