@@ -80,6 +80,15 @@ class FlixAppMain: UIViewController, UITableViewDataSource{
         cell.posterImage.af_setImage(withURL: posterURL)
         return cell
     }
+    // sender cell to detail view
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell){
+            let movie = movieList[indexPath.row]
+            let detailViewControler = segue.destination as! DetailViewController
+            detailViewControler.movie =  movie
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
