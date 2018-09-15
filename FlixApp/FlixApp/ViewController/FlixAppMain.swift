@@ -20,17 +20,18 @@ class FlixAppMain: UIViewController, UITableViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //activityIndicator.startAnimating()
-        //activityIndicator.stopAnimating()
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(FlixAppMain.refresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
+        
         tableView.dataSource = self
         fatchMovies()
     }
     
     @objc func refresh(_ refreshControl : UIRefreshControl){
+        //activityIndicator.startAnimating()
         fatchMovies()
+        //activityIndicator.stopAnimating()
     }
     func fatchMovies(){
         // create url and url request
