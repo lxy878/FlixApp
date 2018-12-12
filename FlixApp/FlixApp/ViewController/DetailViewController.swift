@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
             overviewLabel.sizeToFit()
             
             let backdropString = movie[movieKeys.backdropPath] as! String
-            let baseURL = "https://image.tmdb.org/t/p/w500"
+        let baseURL = "https://image.tmdb.org/t/p/w500"
             let backdropURL = URL(string: baseURL + backdropString)!
             backdropPathLabel.af_setImage(withURL: backdropURL)
             let posterString = movie[movieKeys.posterPath] as! String

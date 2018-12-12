@@ -26,6 +26,7 @@ class FlixAppMain: UIViewController, UITableViewDataSource{
         
         tableView.dataSource = self
         fatchMovies()
+        
     }
     
     @objc func refresh(_ refreshControl : UIRefreshControl){
@@ -44,7 +45,8 @@ class FlixAppMain: UIViewController, UITableViewDataSource{
         // get data
         let task = session.dataTask(with: request) { (data, response, error) in
             if let error = error{
-                print(error.localizedDescription)
+                self.alertMassage()
+                //print(error.localizedDescription)
             }else if let data = data {
                 // create a dictionary for json data
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
@@ -58,6 +60,16 @@ class FlixAppMain: UIViewController, UITableViewDataSource{
         }
         // call task
         task.resume()
+    }
+    func alertMassage(){
+        let alertController = UIAlertController(title: "Can't Get Movies", message: "The internet connection appears to be offline.", preferredStyle: .alert)
+        let tryAction = UIAlertAction(title: "Try Again", style: .cancel) { (action) in
+            self.tableView.reloadData()
+        }
+        alertController.addAction(tryAction)
+        present(alertController,animated: true){
+            
+        }
     }
     // table view data source protocol
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,8 +98,11 @@ class FlixAppMain: UIViewController, UITableViewDataSource{
         let cell = sender as! UITableViewCell
         if let indexPath = tableView.indexPath(for: cell){
             let movie = movieList[indexPath.row]
+            // setting destination
             let detailViewControler = segue.destination as! DetailViewController
             detailViewControler.movie =  movie
+            // remove gray selection
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 
