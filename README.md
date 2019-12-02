@@ -2,7 +2,9 @@
 
 ## Description
 
-The app is a practice of Swift by connecting to a movie API and listing the content of movie.  The app is designed base on Flix app, which displays a movie list by applying cell UI.  The cell of the list will display table view and post view.  When a movie is selected, it will go to its detail view, which contains the post and the description.
+**FlixApp** was one of iOS applications I had developed while I was taking CodePath program at Queens College.
+
+The app is a practice of Swift by connecting to a movie API and listing the content of movies. The app is designed base on Flix app, which displays a movie list by applying cell UI. The cell of the list will display tableView and post view. When a movie is selected, it will go to its detail view, which contains the post and the description.
 
 ## Video Walkthrough
 
