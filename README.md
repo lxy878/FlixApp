@@ -5,9 +5,9 @@
 **FlixApp** was one of iOS applications I had developed while I was taking CodePath training program at Queens College.
 
 The app was a practice of integrating RESTful API into Swift UI.
-- Utilizing The Movie DB API to fetch movie data.  
-- setting the movie data as previews on cell UI.  
-- displaying movie details after one of the previews was selected.  
+- Utilized The Movie DB API to fetch movie data.  
+- set the movie data as previews on cell UI.  
+- displayed movie details after one of the previews was selected.  
 
 ## Video Walkthrough
 
